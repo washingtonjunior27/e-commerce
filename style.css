@@ -107,14 +107,81 @@ html{
 .header-icons{
     display: flex;
     align-items: center;
-    font-size: 2.5rem;
-    cursor: pointer;
 }
 .header-icons i{
     margin-left: 1rem;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
 #toggle{
     display: none;
+}
+
+/* MODALS */
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    gap: 1rem;
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
+    transition: var(--transition);
+}
+.close{
+    cursor: pointer;
+    position: absolute;
+    font-size: 5rem;
+    color: var(--white);
+    font-weight: 900;
+    top: 4%;
+    right: 5%;
+    transition: var(--transition);
+}
+.close:hover{
+    color: var(--red);
+}
+.user.active{
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+.user .modalBtn{
+    width: 60%;
+    max-width: 100%;
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: .5rem;
+}
+.form-item label{
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 700;
+}
+.modalInput{
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+
+/* SEARCH */
+.search{
+    flex-direction: row;
+}
+.search.active{
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+.search .modalBtn{
+    margin-top: 0;
 }
 
 /* HERO SECTION */
@@ -340,6 +407,10 @@ html{
 .new-content-item h3{
     font-size: 1.6rem;
     text-transform: capitalize;
+    margin-top: .5rem;
+}
+.new-content-item h3 + h3{
+    margin-top: 0;
 }
 .new-content-item img{
     transition: var(--transition);
@@ -349,7 +420,7 @@ html{
 .new .btn{
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
 }
 
 /* FOOTER */
@@ -389,6 +460,7 @@ html{
         box-shadow: var(--box-shadow);
         width: 100%;
         background-color: var(--red);
+        z-index: 1;
     }
     .header-navbar.active{
         clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
@@ -402,6 +474,18 @@ html{
     .header-navbar-list li a{
         color: var(--white);
     }
+    .user .btn, .search .btn{
+        width: 90%;
+    }
+    .search .btn{
+        max-width: 100%;
+    }
+    .search{
+        flex-direction: column;
+    }
+    .form-item{
+        width: 90%;
+    }
     .new-content{
         grid-template-areas: 
         "sapato1"
@@ -409,6 +493,15 @@ html{
         "sapato2"
         "tenis2" 
         "sapato3";
+    }
+
+    .row-item{
+        width: 100%;
+    }
+
+    .row-item__img{
+        width: 100%;
+        height: 45rem;
     }
 }
 

@@ -1,6 +1,14 @@
 const toggle = document.getElementById('toggle');
 const header = document.querySelector('.header');
-const navbarList = document.querySelector('.header-navbar-list')
+
+const login = document.getElementById('login');
+const closeLogin = document.getElementById('closeLogin');
+
+const search = document.getElementById('search');
+const closeSearch = document.getElementById('closeSearch');
+
+const navbarList = document.querySelector('.header-navbar-list');
+
 
 // MENU MOBILE
 toggle.addEventListener('click', () => {
@@ -24,4 +32,24 @@ navbarList.addEventListener("click", () => {
     if(navbar.classList.contains("active")){
         navbar.classList.remove("active");
     }
+})
+
+// USER LOGIN
+login.addEventListener('click', () => {
+    const user = document.querySelector('.user');
+    user.classList.toggle('active')
+})
+closeLogin.addEventListener('click', () => {
+    const user = document.querySelector('.user');
+    user.classList.toggle('active')
+})
+
+// SEARCH
+search.addEventListener('click', ()=>{
+    const searchModal = document.querySelector('.search');
+    searchModal.classList.toggle('active');
+})
+closeSearch.addEventListener('click', () => {
+    const searchModal = document.querySelector('.search');
+    searchModal.classList.toggle('active')
 })

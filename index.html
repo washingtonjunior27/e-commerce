@@ -19,17 +19,40 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#products">Product</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#new">New</a></li>
                 <li><a href="#cta">Newslatter</a></li>
+                <li><a href="#new">New</a></li>
             </ul>
         </nav>
         <div class="header-icons">
-            <i class='bx bx-search'></i>
-            <i class='bx bx-user'></i>
-            <i class='bx bx-cart'></i>
+            <i class='bx bx-search' id="search"></i>
+            <i class='bx bx-user' id="login"></i>
+            <i class='bx bx-cart' id="cart"></i>
             <i class='bx bx-menu' id="toggle"></i>
         </div>
     </header> <!-- END HEADER -->
+
+    <!-- USER -->
+    <section class="user modal">
+        <i class='bx bx-x close' id="closeLogin"></i>
+        <div class="form-item">
+            <label for="user">Username</label>
+            <input class="modalInput" type="text" placeholder="Username" name="user" id="user">
+        </div>
+        <div class="form-item">
+            <label for="password">Password: </label>
+            <input class="modalInput" type="password" placeholder="password" name="password" id="password">
+        </div>
+        <button class="btn modalBtn">Login</button>
+    </section> <!-- END USER-->
+
+    <!-- SEARCH -->
+    <section class="search modal">
+        <i class='bx bx-x close' id="closeSearch"></i>
+        <div class="form-item">
+            <input class="modalInput" type="text" placeholder="Search">
+        </div>
+        <button class="btn modalBtn">Search</button>
+    </section>
 
     <!-- HERO SECTION -->
     <section class="hero">
