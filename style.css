@@ -36,7 +36,7 @@ html{
 }
 
 :root{
-    --black: #000000;
+    --black: #0d1114;
     --white: #ffffff;
     --red: #E52D3F;
     --green: #1FA233;
@@ -112,6 +112,7 @@ html{
     margin-left: 1rem;
     font-size: 2.5rem;
     cursor: pointer;
+    color: var(--black);
 }
 #toggle{
     display: none;
@@ -202,9 +203,10 @@ html{
     font-size: 1.6rem;
 }
 .hero h1{
-    font-size: 5rem;
+    font-size: 4.5rem;
     text-transform: capitalize;
-    font-weight: 900;
+    font-weight: 600;
+    color: var(--black);
 }
 .hero h3{
     font-size: 2rem;
@@ -227,7 +229,6 @@ html{
 .btn:hover{
     background-color: var(--red);
     color: var(--light);
-    border: 2px solid var(--red);
 }
 .down-more i{
     position: absolute;
@@ -275,6 +276,7 @@ html{
     width: 28rem;
     height: 33rem;
     transition: var(--transition);
+    cursor: pointer;
 }
 .row-item__img:hover{
     scale: 0.9;
@@ -308,8 +310,7 @@ html{
     transition: var(--transition);
 }
 .row-item .feedback .bx-heart:hover{
-    color: #E52D3F;
-    fill: var(--red);
+    color: var(--red);
 }
 .row-item h3{
     font-size: 1.6rem;
@@ -415,7 +416,11 @@ html{
 .new-content-item img{
     transition: var(--transition);
     border: 7px solid var(--red);
+    cursor: pointer;
     box-shadow: var(--box-shadow);
+}
+.new-content-item img:hover{
+    scale: 1.02;
 }
 .new .btn{
     display: flex;
@@ -474,6 +479,9 @@ html{
     .header-navbar-list li a{
         color: var(--white);
     }
+    .hero h1{
+        width: 30rem;
+    }
     .user .btn, .search .btn{
         width: 90%;
     }
@@ -505,7 +513,7 @@ html{
     }
 }
 
-@media(max-width: 340px){
+@media(max-width: 440px){
     .header-logo{
         font-size: 2rem;
     }
